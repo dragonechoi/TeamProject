@@ -12,6 +12,7 @@
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: 30px;
+                z-index: 0;
             }
 
             #place {
@@ -35,19 +36,22 @@
                 margin-left: 100px;
                 position: absolute;
                 z-index: 2;
-                
                
             }
+            
 
             @media (max-width: 768px) {
               title {
-                    display: flexbox;
+                    display: inline-flexbox;
                     justify-content: center;
                     height: 100%;
                     overflow: hidden;
+                    align-content: center;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     position: absolute;
+                    
+                    
              }
                
             }
@@ -55,17 +59,14 @@
                 #place {
                 display: inline-block;
                  width: auto;
-                 max-width: 100%;
+                 max-width: 30%;
                  height: 70px;
                  border-radius: 35px;
                  margin-left: auto;
                  margin-right: auto;
                  position: absolute;
-                 top: 10%;
-                 left: 0;
-                 right: 0;
                  font-size: 35px;
-                 z-index: 1;
+                 z-index: 2;
                  overflow: hidden;
                  text-overflow: ellipsis;
                  white-space: nowrap;
@@ -88,8 +89,10 @@
         <div id="map" style="width: 1200px; height: 800px; border: 1px solid black;">
             <div>
 
-                <div><a href="" id="title" ><img id="h2" src="./image/pngegg.png" width="70"></img> </a></div>
-                <input type="text" name="" id="place" onkeydown="handleSearch(event)">
+                <div><a href="" id="title" ><img id="h2" src="./image/pngegg.png" width="70"></img> </a>
+                    <input type="text" name="" id="place" onkeydown="handleSearch(event)">
+                </div>
+                
 
             </div>
         </div>
